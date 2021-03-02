@@ -17,5 +17,5 @@ jobs:
           node-version: '12.x'
       - name: npm install 
         run: npm install 
-      - name: lint 
-        run: npm run eslint 
+      - name: move 
+        run: ls -l
