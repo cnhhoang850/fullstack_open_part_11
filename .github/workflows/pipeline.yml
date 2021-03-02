@@ -18,4 +18,6 @@ jobs:
       - name: npm install 
         run: npm install 
       - name: move 
+        run: cd full-stack-open-pokedex
+      - name: list
         run: ls -l
