@@ -1,0 +1,21 @@
+name: Deployment pipeline 
+
+on: 
+  push:
+    branches: [main]
+
+jobs: 
+  #most start with a build step that recreate a specific environment
+  simple_deployment_pipeline: 
+    runs-on: ubuntu-latest
+    steps: 
+      #use an action, public or custom
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        #indicate a parameter for the action
+        with: 
+          node-version: '12.x'
+      - name: npm install 
+        run: npm install 
+      - name: lint 
+        run: npm run eslint 
