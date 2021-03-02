@@ -16,6 +16,7 @@ jobs:
         with: 
           node-version: '12.x'
       - name: npm install 
+        working-directory: ./full-stack-open-pokedex
         run: npm install 
       - name: lint 
         working-directory: ./full-stack-open-pokedex
